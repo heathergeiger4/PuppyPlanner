@@ -25,32 +25,16 @@ function ActivityType() {
 }
 
 function TimeEntry() {
-  const [value, onChange] = useState(new Date());
+  const [value, setValue] = useState(new Date());
 
   return(
     <div>
       <label> Input date and time: </label>
-      <DateTimePicker onChange={onChange} value={value} />
+      <DateTimePicker onChange={setValue} value={value} />
       <p>DateTime: {value.toLocaleString()}</p>
     </div>
   )
 }
-
-// function TimeEntry() {
-//   const [inputValue, setInputValue] = useState('');
-
-//   const handleChange = (event) => {
-//     setInputValue(event.target.value);
-//   };
-//   return (
-//     <form>
-//       <label> Time: 
-//         <input type = "text" value = {inputValue} onChange = {handleChange} />
-//       </label>
-//       <p>Time: {inputValue}</p>
-//     </form>
-//   )
-// }
 
 function SubmitButton() {
   return <button>Submit</button>;
